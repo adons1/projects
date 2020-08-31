@@ -1,0 +1,126 @@
+﻿
+@{
+    ViewBag.Title = "Dropdown";
+    Layout = null;
+}
+
+<html>
+<head>
+    <title>Hello React</title>
+    <link rel="stylesheet" href="~/Content/bootstrap.css" />
+    <style>
+        #dropdownMenu div ul {
+            cursor: pointer;
+            float: left;
+            background-color: grey;
+            list-style: none;
+            padding: 10px 20px 10px 20px;
+            text-align: center;
+            width:150px;
+        }
+        #dropdownMenu div ul p {
+            font-size: 20px;
+            width: 100px;
+        }
+        #dropdownMenu div ul :hover{
+            background-color:darkgrey;
+        }
+        #dropdownMenu div ul li {
+            padding: 10px 20px 10px 20px;
+            display: none;
+            width: 100px;
+       }
+            #dropdownMenu div ul li :hover{
+                background-color: darkgrey;
+            }
+    
+    </style>
+    @Scripts.Render("~/Scripts/jquery-3.3.1.js")
+    @Scripts.Render("~/Scripts/jquery.unobtrusive-ajax.js")
+</head>
+<body>
+
+    <h2>Dropdown</h2>
+    <div id="dropdownMenu"></div>
+
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.0/umd/react.development.js"></script>
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.0/umd/react-dom.development.js"></script>
+
+    <script src='@Url.Content("~/Scripts/ReactJS/Dropdown/App.jsx")'></script>
+    <script>
+        var i1=0
+        $(".row1").click(
+            function () {
+                if (i1 % 2 == 0) {
+                    $(".row1 li").show(500)
+                    i1++
+                }
+                else {
+                    i1++
+                    $(".row1 li").hide(500)
+                }
+                
+            }
+        )
+        var i2 = 0
+        $(".row2").click(
+            function () {
+                if (i2 % 2 == 0) {
+                    $(".row2 li").show(500)
+                    i2++
+                }
+                else {
+                    i2++
+                    $(".row2 li").hide(500)
+                }
+
+            }
+        )
+        var i3 = 0
+        $(".row3").click(
+            function () {
+                if (i3 % 2 == 0) {
+                    $(".row3 li").show(500)
+                    i3++
+                }
+                else {
+                    i3++
+                    $(".row3 li").hide(500)
+                }
+
+            }
+        )
+        var i4 = 0
+        $(".row4").click(
+            function () {
+                if (i4 % 2 == 0) {
+                    $(".row4 li").show(500)
+                    i4++
+                }
+                else {
+                    i4++
+                    $(".row4 li").hide(500)
+                }
+
+            }
+        )
+        var i5 = 0
+        $(".row5").click(
+            function () {
+                if (i5 % 2 == 0) {
+                    $(".row5 li").show(500)
+                    i5++
+                }
+                else {
+                    i5++
+                    $(".row5 li").hide(500)
+                }
+
+            }
+        )
+    </script>
+
+
+</body>
+</html>
+

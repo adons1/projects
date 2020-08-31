@@ -1,0 +1,67 @@
+﻿
+@{
+    ViewBag.Title = "jQueryTest";
+    Layout = null;
+}
+
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    @Scripts.Render("~/Scripts/jquery-3.3.1.js")
+    @Scripts.Render("~/Scripts/jquery.unobtrusive-ajax.js")
+</head>
+<body>
+    <table class="openqqq">
+        <tr>
+            <td>Слово</td>
+            <td>Перевод</td>
+        </tr>
+        <tr>
+            <td>Cabbage</td>
+            <td>Капуста</td>
+        </tr>
+        <tr>
+            <td>Carrot</td>
+            <td>Морковь</td></tr>
+        <tr>
+            <td>Potato</td>
+            <td>Картофель</td>
+        </tr>
+        <tr>
+            <td>Tomato</td>
+            <td>Помидор</td>
+        </tr>
+    </table>
+
+    <button id="qwerty">Show</button>
+    <div id="ewq"></div>
+    <form>
+        <input id="celt" type="text">
+    </form>
+
+    <button id="ewwww">TGSH</button>
+    <div id="ewqqq"></div>
+
+    <script src="jquery-1.10.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".openqqq tr:first-child").css('color','green');
+        });
+        $("#qwerty").click(function () {
+
+            var inTex = $("#ewq").text();
+
+            if (inTex) {
+                $("#ewq").empty();
+               
+            }
+            else {
+                $("#ewq").text("Text is here!");
+            }
+        });
+        $("#ewwww").
+        
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,59 @@
+﻿@{
+    Layout = null;
+    string str = "content";
+    string divId = "qwerty2";
+    string result = "result";
+}
+<html>
+<head>
+    <title>Hello React</title>
+    <style>
+        .done {
+            text-decoration: line-through;
+        }
+    </style>
+    <link rel="stylesheet" href="~/Content/bootstrap.css" />
+    @Scripts.Render("~/Scripts/jquery-3.3.1.js")
+    @Scripts.Render("~/Scripts/jquery.unobtrusive-ajax.js")
+</head>
+<body>
+    <div id="@str"></div>
+
+    <div id="@divId">
+        <p id="result">0</p>
+        <button onClick="decrement()" >-</button>
+        <button onClick="increment()" >+</button>
+    </div>
+    <script>
+        function color(value) {
+            if ((parseInt(value) % 2 == 1) | (parseInt(value) % 2 == -1)) {
+                document.getElementById("@divId").style.backgroundColor = "red";
+            }
+            else {
+                document.getElementById("@divId").style.backgroundColor = "green";
+            }
+        }
+        function decrement() {
+            var value = document.getElementById("@result").innerText;
+            color(value);
+            document.getElementById("@result").innerText = parseInt(value) - 1;
+        }
+        function increment() {
+            var value = document.getElementById("@result").innerText;
+            color(value);
+            document.getElementById("@result").innerText = parseInt(value) + 1;
+        }
+    </script>
+
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react/16.8.0/umd/react.development.js"></script>
+    <script crossorigin src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.0/umd/react-dom.development.js"></script>
+
+    <script src='@Url.Content("~/Scripts/ReactJS/Hooks/Context.jsx")'></script>
+    <script src='@Url.Content("~/Scripts/ReactJS/Hooks/E6060Component.jsx")'></script>
+    <script src='@Url.Content("~/Scripts/ReactJS/Hooks/App.jsx")'></script>
+
+
+
+</body>
+</html>
+
