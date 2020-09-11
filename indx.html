@@ -1,0 +1,48 @@
+<!--<p id="qwe"></p>
+<button id="increase"  onclick ="increase()">+</button>
+<button id="decrease"  onclick ="decrease()">-</button>-->
+
+<input type="text" id="name">
+<input type="text" id="surname">
+
+<button onclick="add_value()">add</button>
+
+<script>
+	var array=[]
+	function add_value(){
+		var name = document.getElementById("name").value;
+		var surname = document.getElementById("surname").value;
+		var person={name:name, surname:surname};
+		array.push(person);
+		sessionStorage.setItem("array",JSON.stringify(array))
+		display();
+	}
+	function display(){
+		var s="";
+		var str_help="";
+		for(var i=0;i<array.length;i++){
+			
+			s=s+"<p id='del"+ i +"'>"+array[i].name+" "+array[i].surname+"</p>"
+		}
+		var container=document.getElementById("container");
+		container.innerHTML=s;
+	}
+	function deletee(id){
+		var del=document.getElementById('del'+id);
+		del.remove();
+	}
+</script>
+
+<script>
+	var i=0;
+	var paragraph=document.getElementById('qwe');
+	function increase(){
+		i++;
+		paragraph.innerHTML=i;
+	}
+	function decrease(){
+		i--;
+		paragraph.innerHTML=i;
+	}
+</script>
+<div id="container"></div>
