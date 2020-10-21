@@ -8,12 +8,12 @@
 
 using namespace std;
 
-void push(int*, int);
-void print(int*);
-void pop(int*);
-bool my_is_empty(int*);
-void _help_realese_mode(int*, string, int*);
-int* _help_reallocate(int*, int);
+void push(int*, int);//pushing an element to stack
+void print(int*);//printing whole stack beginning from root
+void pop(int*);//poping an element from stack
+bool my_is_empty(int*);//checks if stack is empty
+void _help_realese_mode(int*, string, int*);//useful loop for console control
+int* _help_reallocate(int*, int);//reallocates an array, that contains stack
 
 int main(){
     int n=10;
